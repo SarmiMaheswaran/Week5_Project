@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Doctor Appointment Booking</h1>
+        </header>
+        <section id="booking-section">
+            <h2>Book an Appointment</h2>
+            <form id="booking-form">
+                <input type="text" id="patient-name" placeholder="Patient Name" required>
+                <select id="doctor-selection" required>
+                    <option value="">Select a doctor</option>
+                </select>
+                <input type="date" id="appointment-date" required>
+                <select id="appointment-time" required></select>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+        <section id="cancellation-section">
+            <h2>Cancel an Appointment</h2>
+            <form id="cancellation-form">
+                <input type="text" id="appointment-id" placeholder="Appointment ID" required>
+                <button type="submit">Cancel Appointment</button>
+            </form>
+        </section>
+        <section id="view-appointments-section">
+            <h2>View Appointments</h2>
+            <button id="view-appointments-btn">View All Appointments</button>
+            <div id="appointments-list"></div>
+        </section>
+        <section id="doctors-section">
+            <h2>Doctors</h2>
+            <div id="doctors-list"></div>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

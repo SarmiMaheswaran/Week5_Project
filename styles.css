@@ -1,0 +1,163 @@
+body {
+    font-family: 'times', sans-serif;
+    background: linear-gradient(to right, lightcoral, #f2a47a);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+}
+
+.container {
+    background:burlywood ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow-y: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    
+    margin-top: 60%;
+}
+
+h1 {
+   
+    color: black;
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+@keyframes slideInFromTop {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h2 {
+    background:crimson ;
+    color: black;
+    margin-bottom: 10px;
+}
+
+section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+input, select, button {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+button {
+    background:orangered;
+    width:auto;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background:green;
+    transform: translateY(-2px);
+}
+
+.doctor-card {
+    background:lightcoral;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
+.slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.slot {
+    width: 60px;
+    height: 60px;
+    background: green;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8em;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.slot.booked {
+    background: red;
+}
+
+.slot:hover::after {
+    content: attr(data-message);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+.appointment-item {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.appointment-item p {
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
